@@ -21,7 +21,7 @@ export class PasswordGeneratorComponent {
   }
 
   lengthValid(): boolean {
-    this.validLength = this.myForm?.controls.length?.touched && this.myForm?.controls.length?.value <= 0
+    this.validLength = this.myForm?.controls.length?.touched && this.myForm?.controls.length?.value < 6
     return this.validLength;
   }
   generateClicked() {
